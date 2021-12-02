@@ -4,7 +4,7 @@
 
 Seemingly when running the `svelte-kit package` command, comments are stripped from the `__propDef` interface for the generated definition (`.d.ts`) files of the processed Svelte Components. Which affects IDE (at least on my VS Code instance) autocomplete experience.
 
-Looking into it for this for the reproduction repository, it seems that the referencing of `$$props` (and by extension `$$restProps`), `__propDef` loses the comment information. But also gains an index definition `[x: string]: any;`.
+Looking into it for the reproduction repository, it seems that the referencing of `$$props` (and by extension `$$restProps`), `__propDef` loses the comment information. But also gains an index definition `[x: string]: any;`.
 
 ```diff
 import { SvelteComponentTyped } from "svelte";
